@@ -6,7 +6,7 @@ import { MumbleDetails } from '../mumble-details/mumble-details';
 import { ProfilePicture } from '../profile-picture/profile-picture';
 
 export default {
-  title: 'Cards/UserCard',
+  title: 'Card Example/UserCard',
   component: Heading1,
 } as Meta<{}>;
 

@@ -10,9 +10,9 @@ const getVariantStyles = (variant: LabelProps['variant']) => {
     case 'XL':
       return 'text-2xl';
     case 'L':
-      return 'text-xl';
+      return 'text-lg';
     case 'M':
-      return 'text-base';
+      return 'text-sm';
     case 'Placeholder':
       return 'text-base text-slate-300';
     case 'S':

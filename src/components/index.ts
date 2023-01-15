@@ -1,13 +1,11 @@
 export * from './button';
 export * from './button-round';
+export * from './comment-action';
 export * from './heading';
 export * from './icons';
-export * from './label';
-export * from './paragraph';
-export * from './like-action';
-export * from './comment-action';
-export * from './settings-button';
 export * from './input';
+export * from './label';
+export * from './like-action';
 export * from './link-label';
 export * from './logos';
 export * from './logout-button';
@@ -19,3 +17,4 @@ export * from './settings-button';
 export * from './share-button';
 export * from './switch';
 export * from './textarea';
+

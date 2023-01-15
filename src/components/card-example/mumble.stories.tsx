@@ -7,7 +7,7 @@ import { ProfilePicture } from '../profile-picture/profile-picture';
 import { ShareButton } from '../share-button/share-button';
 
 export default {
-  title: 'Cards/Mumble',
+  title: 'Card Example/Mumble',
   component: Heading1,
 } as Meta<{}>;
 
