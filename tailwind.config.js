@@ -48,6 +48,16 @@ module.exports = {
         xl: '48px',
         xxl: '64px',
       },
+      keyframes: {
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-8deg)' },
+          '50%': { transform: 'rotate(8deg)' },
+        },
+      },
+      animation: {
+        'bounce-short': 'bounce 1s ease-in-out 2',
+        'like-hover': 'wiggle 1s ease-in-out infinite',
+      },
     },
   },
   plugins: [],
