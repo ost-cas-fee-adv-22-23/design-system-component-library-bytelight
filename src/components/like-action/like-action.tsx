@@ -4,42 +4,43 @@ import { HeartEmptyIcon, HeartFilledIcon } from '../index';
 type Props = {
   onClick: () => void;
   count: number;
+  hasMyLike: boolean;
 };
 
-export const LikeAction: FC<Props> = ({ onClick, count }) => {
-  const [isFirstLike, setIsFirstLike] = useState<boolean>(false);
+export const LikeAction: FC<Props> = ({ onClick, count, hasMyLike }) => {
+  const [isLiking, setIsLiking] = useState<boolean>(false);
 
   return (
     <div>
       <button
         onClick={() => {
           onClick();
-          if (count === 0) {
-            setIsFirstLike(true);
+          if (!hasMyLike) {
+            setIsLiking(true);
             setTimeout(() => {
-              setIsFirstLike(false);
+              setIsLiking(false);
             }, 2000);
           }
         }}
-        className="flex items-center text-slate-600 hover:bg-pink-50  hover:rounded-2xl"
+        className="flex items-center text-slate-600 hover:bg-pink-50 hover:rounded-2xl"
       >
-        <div className="flex items-center gap-x-xs p-xs hover:text-pink-700">
-          {count === 0 ? (
+        <div className="flex items-center gap-x-xs p-xs hover:text-pink-700 group">
+          {hasMyLike ? (
             <>
-              <span className="hover:text-pink-500">
-                <HeartEmptyIcon size="16" />
+              <span className="text-pink-500 animate-bounce-short">
+                <HeartFilledIcon size="16" />
               </span>
-              <span className={`${isFirstLike ? 'text-pink-900' : ''}`}>{isFirstLike ? 'Liked' : 'Like'}</span>
+              <span className="text-pink-900">
+                {count} {isLiking ? 'Liked!' : count === 1 ? 'Like' : 'Likes'}
+              </span>
             </>
           ) : (
             <>
-              <span className="text-pink-500">
-                <HeartFilledIcon size="16" />
+              <span className="hover:text-pink-500 group-hover:animate-like-hover">
+                <HeartEmptyIcon size="16" />
               </span>
-
-              <span className="text-pink-900">
-                {count}
-                {isFirstLike ? ' Liked' : count === 1 ? ' Like' : ' Likes'}
+              <span className={`${isLiking ? 'text-pink-900' : ''}`}>
+                {count} {count === 1 ? 'Like' : 'Likes'}
               </span>
             </>
           )}
