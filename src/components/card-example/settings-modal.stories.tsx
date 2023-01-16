@@ -2,7 +2,6 @@ import { Meta, Story } from '@storybook/react';
 import React from 'react';
 import { Button, CancelIcon, CheckmarkIcon, EyeIcon, Heading1, Input, InputWithIcon, Label, Modal, Textarea } from '../index';
 
-
 export default {
   title: 'Card Example/SettingsModal',
   component: Heading1,

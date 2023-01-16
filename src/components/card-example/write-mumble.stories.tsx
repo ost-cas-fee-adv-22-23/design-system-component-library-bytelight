@@ -1,15 +1,12 @@
 import { Meta, Story } from '@storybook/react';
 import React, { useState } from 'react';
-import { Button, CancelIcon, CheckmarkIcon, Heading4, IconLabel, Label, Modal, ProfileIcon, SendIcon, UploadIcon } from '../index';
-import { ProfilePicture } from '../profile-picture/profile-picture';
-import { Textarea } from '../textarea/textarea';
+import { Button, CancelIcon, CheckmarkIcon, Heading4, IconLabel, Label, Modal, ProfileIcon, ProfilePicture, SendIcon, Textarea, UploadIcon } from '../index';
 
 export default {
   title: 'Card Example/WriteMumble',
 } as Meta<{}>;
 
 const Template: Story<{}> = () => {
-  const [textareaValue, setTextareaValue] = useState('');
   const [showModal, setShowModal] = useState(false);
   return (
     <div className="flex flex-col gap-y-l bg-slate-100 w-full h-full p-xl">
@@ -26,7 +23,7 @@ const Template: Story<{}> = () => {
         </div>
 
         <div className="mt-s">
-          <Textarea placeholder="Deine Meinung zählt!" onTextareaChange={(e) => setTextareaValue(e)} />
+          <Textarea placeholder="Deine Meinung zählt!" onTextareaChange={() => {}} />
         </div>
         <div className="flex gap-x-s mt-s">
           <Button as="button" variant="secondary" onClick={() => setShowModal(true)}>
@@ -56,7 +53,7 @@ const Template: Story<{}> = () => {
           </div>
         </div>
         <div className="mt-s">
-          <Textarea placeholder="Deine Meinung zählt!" onTextareaChange={(e) => setTextareaValue(e)} />
+          <Textarea placeholder="Deine Meinung zählt!" onTextareaChange={() => {}} />
         </div>
         <div className="flex gap-x-s mt-s">
           <Button as="button" variant="secondary" onClick={() => setShowModal(true)}>
@@ -73,7 +70,6 @@ const Template: Story<{}> = () => {
           </Button>
         </div>
       </div>
-
       {showModal && (
         <div className="fixed inline-flex w-full h-full items-center justify-center">
          <Modal onClose={() => setShowModal(false)} title='Bild hochladen'>
@@ -87,7 +83,6 @@ const Template: Story<{}> = () => {
             </div>
           </label>
         </form>
-
         <div className="flex mb-xl px-l ">
           <Button as="button" variant="secondary" onClick={() => {}}>
             <div className="flex items-center justify-center gap-x-xs">

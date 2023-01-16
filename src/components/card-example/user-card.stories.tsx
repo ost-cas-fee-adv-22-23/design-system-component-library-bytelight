@@ -1,8 +1,7 @@
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
 import { MumbleIcon } from '../icons/mumble';
-import { Button, IconLabel, Label, ProfileIcon } from '../index';
-import { ProfilePicture } from '../profile-picture/profile-picture';
+import { Button, IconLabel, Label, ProfileIcon, ProfilePicture } from '../index';
 
 export default {
   title: 'Card Example/UserCard',
