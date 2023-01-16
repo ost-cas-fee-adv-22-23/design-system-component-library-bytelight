@@ -23,7 +23,6 @@ const Template: Story<{}> = () => {
             </div>
           </label>
         </form>
-
         <div className="flex mb-xl px-l ">
           <Button as="button" variant="secondary" onClick={() => {}}>
             <div className="flex items-center justify-center gap-x-xs">

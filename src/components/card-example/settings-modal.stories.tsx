@@ -1,5 +1,5 @@
 import { Meta, Story } from '@storybook/react';
-import React, { useState } from 'react';
+import React from 'react';
 import { Button, CancelIcon, CheckmarkIcon, EyeIcon, Heading1, Input, InputWithIcon, Label, Modal, Textarea } from '../index';
 
 
@@ -9,17 +9,17 @@ export default {
 } as Meta<{}>;
 
 const Template: Story<{}> = () => {
-  const [inputValue, setInputValue] = useState('');
+ 
   return (
   <>
   <Modal onClose={() => {}} title='Einstellungen'>
     <div className="flex flex-col px-l gap-y-xxs">
       <Label variant="XL"> Persönliche Einstellungen</Label>
-      <Input placeholder="" label="Name Vorname" labelVariant="M" onInput={(e) => setInputValue(e)} />
-      <Input placeholder="" label="E-Mail-Adresse" labelVariant="M" onInput={(e) => setInputValue(e)} />
-      <Input placeholder="" label="Ortschaft" labelVariant="M" onInput={(e) => setInputValue(e)} />
+      <Input placeholder="" label="Name Vorname" labelVariant="M" onInput={() => {}} />
+      <Input placeholder="" label="E-Mail-Adresse" labelVariant="M" onInput={() => {}} />
+      <Input placeholder="" label="Ortschaft" labelVariant="M" onInput={() => {}} />
       <Label variant='M'>Biografie</Label>
-      <Textarea placeholder='' onTextareaChange={(e) => setInputValue(e)}/>
+      <Textarea placeholder='' onTextareaChange={() => {}}/>
     </div>
     <div className="flex flex-col py-m px-l gap-y-xxs">
       <Label variant="XL">Passwort ändern</Label>
@@ -27,17 +27,15 @@ const Template: Story<{}> = () => {
         placeholder=""
         label="Altes Passwort"
         labelVariant="M"
-        onInput={(e) => setInputValue(e)}
+        onInput={() => {}}
         icon={<EyeIcon size="16" />}
-      
       />
       <InputWithIcon
         placeholder=""
         label="Neues Passwort"
         labelVariant="M"
-        onInput={(e) => setInputValue(e)}
+        onInput={() => {}}
         icon={<EyeIcon size="16" />}
-       
       />
     </div>
     <div className="flex px-l gap-x-s pb-l">
@@ -54,7 +52,6 @@ const Template: Story<{}> = () => {
         </div>
       </Button>
     </div>
-
   </Modal>
 </>
   )
