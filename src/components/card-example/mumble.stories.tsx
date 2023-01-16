@@ -1,9 +1,7 @@
 import { Meta, Story } from '@storybook/react';
-import React, { useEffect, useState } from 'react';
-import { useCopyToClipboard } from 'react-use';
-import { ClockIcon, CommentAction, IconLabel, Label, LikeAction, Paragraph, ProfileIcon } from '../index';
+import React, { useState } from 'react';
+import { ClockIcon, IconLabel, Label, LikeAction, Paragraph, ProfileIcon } from '../index';
 import { ProfilePicture } from '../profile-picture/profile-picture';
-import { ShareButton } from '../share-button/share-button';
 
 export default {
   title: 'Card Example/Mumble',
@@ -11,16 +9,8 @@ export default {
 
 const Template: Story<{}> = () => {
   const [likes, setLikes] = useState(0);
-  const [comments, setComments] = useState(0);
   const [hasMyLike, setHasMyLike] = useState(false);
-  const [isCopied, setIsCopied] = useState(false);
-  const [, copyToClipboard] = useCopyToClipboard();
-  const link = 'https://smartive.ch/';
-
-  useEffect(() => {
-    const time = setTimeout(() => setIsCopied(false), 2000);
-  }, [isCopied]);
-
+  
   return (
     <div className=" bg-slate-100 w-full h-full p-xl">
       <div className=" bg-white w-[615px] h-[650px] p-xl rounded-2xl">
@@ -50,7 +40,6 @@ const Template: Story<{}> = () => {
           />
         </div>
         <div className="flex justify-start gap-x-l mt-s">
-          <CommentAction onClick={() => setComments(comments + 1)} count={comments} />
           <LikeAction
             hasMyLike={hasMyLike}
             count={likes}
@@ -64,13 +53,7 @@ const Template: Story<{}> = () => {
               setHasMyLike(true);
             }}
           />
-          <ShareButton
-            onClick={() => {
-              setIsCopied(!isCopied);
-              copyToClipboard(link);
-            }}
-            isActive={isCopied}
-          />
+         
         </div>
       </div>
     </div>

@@ -38,8 +38,8 @@ const Template: Story<{}> = () => (
       <Label variant="S">Label S</Label>
     </div>
     <div className="flex flex-col gap-y-xs mt-m">
-      <IconLabel variant='violet' value='Icon Label' icon={<ProfileIcon size="12" />} href={'#'}/>
-      <IconLabel variant='gray' value='Icon Label' icon={<LocationIcon size="12" />} href={'#'}/>
+      <IconLabel variant='violet' value='Icon Label' icon={<ProfileIcon size="12" />}/>
+      <IconLabel variant='gray' value='Icon Label' icon={<LocationIcon size="12" />}/>
     </div>
     <div className="mt-m">
       <LinkLabel href='#'>Link Label</LinkLabel>
