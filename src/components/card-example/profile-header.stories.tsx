@@ -1,8 +1,6 @@
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
-
-import { CalendarIcon, IconLabel, Label, LocationIcon, Paragraph, ProfileIcon } from '../index';
-import { ProfilePicture } from '../profile-picture/profile-picture';
+import { CalendarIcon, IconLabel, Label, LocationIcon, Paragraph, ProfileIcon, ProfilePicture } from '../index';
 
 export default {
   title: 'Card Example/ProfileHeader',
