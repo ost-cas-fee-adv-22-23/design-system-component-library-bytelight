@@ -1,14 +1,14 @@
 import React, { FC } from 'react';
 import { Label } from '../label/label';
 
-type InputProps = {
+type Props = {
   placeholder: string;
   label: string;
   labelVariant: 'XL' | 'L' | 'M' | 'S';
   onInput: (input: string) => void;
 };
 
-export const Input: FC<InputProps> = ({ placeholder, label, labelVariant = 'L', onInput }) => (
+export const Input: FC<Props> = ({ placeholder, label, labelVariant = 'L', onInput }) => (
   <>
     <Label variant={labelVariant}>{label}</Label>
     <div className=" flex items-center justify-end border border-slate-200 rounded-lg hover:border-violet-600">
