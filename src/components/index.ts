@@ -4,7 +4,6 @@ export * from './comment-action';
 export * from './heading';
 export * from './icon-label';
 export * from './icons';
-export * from './input';
 export * from './input-with-icon';
 export * from './label';
 export * from './like-action';
@@ -17,4 +16,4 @@ export * from './profile-picture';
 export * from './share-button';
 export * from './switch';
 export * from './textarea';
-
+export * from './input';
