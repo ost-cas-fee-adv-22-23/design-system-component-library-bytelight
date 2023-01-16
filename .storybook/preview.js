@@ -10,7 +10,7 @@ export const parameters = {
   },
   options: {
     storySort: {
-      order: ['Intro', 'Typography', 'Spacing', 'Colors', 'Components', 'Card Example'],
+      order: ['Intro','InstallPackage', 'Typography', 'Iconography', 'Logos', 'Spacing', 'Colors' , 'Components', ['Modal'], 'Card Example'],
     },
   },
 };

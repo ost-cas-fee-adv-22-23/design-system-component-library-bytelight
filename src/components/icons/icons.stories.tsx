@@ -41,7 +41,7 @@ const colors = [
   'slate50',
 ] as const;
 export default {
-  title: 'Components',
+  title: 'Iconography',
   component: Icons,
   argTypes: {
     color: {
@@ -102,8 +102,8 @@ const Template: ComponentStory<typeof Icons['ArrowDownIcon']> = (args) => {
   );
 };
 
-export const Icon = Template.bind({});
+export const Iconography = Template.bind({});
 
-Icon.args = {
+Iconography.args = {
   size: '16px',
 };
