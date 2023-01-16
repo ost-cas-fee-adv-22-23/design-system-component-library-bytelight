@@ -9,7 +9,6 @@ export const Colors: FC = () => {
     <>
       <Heading1>Colors</Heading1>
       <Paragraph fontSize="L">Base on the Tailwind colors "Slate", "Pink" and "Violet".</Paragraph>
-
       <Paragraph fontSize="M">VIOLET</Paragraph>
       <div className="flex gap-x-xs my-s">
         {sizes.map((size) => (

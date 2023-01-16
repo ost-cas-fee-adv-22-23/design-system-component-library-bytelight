@@ -1,17 +1,15 @@
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
 import { MumbleIcon } from '../icons/mumble';
-import { Button, Heading1, Label } from '../index';
-import { MumbleDetails } from '../mumble-details/mumble-details';
+import { Button, IconLabel, Label, ProfileIcon } from '../index';
 import { ProfilePicture } from '../profile-picture/profile-picture';
 
 export default {
   title: 'Card Example/UserCard',
-  component: Heading1,
 } as Meta<{}>;
 
 const Template: Story<{}> = () => (
-  <div className="bg-slate-100 w-screen h-screen p-l">
+  <div className="bg-slate-100 w-full h-full p-l">
     <div className="flex gap-x-xs">
       <div className="flex flex-col items-center w-[215px] h-[260px] rounded-2xl bg-white py-s">
         <ProfilePicture
@@ -22,10 +20,10 @@ const Template: Story<{}> = () => (
 
         <div className="flex flex-col items-center justify-center mb-s mt-s">
           <Label variant="L">Marco</Label>
-          <MumbleDetails variant="username" value="BaumG" />
+          <IconLabel variant="violet" value="BaumG" icon={<ProfileIcon size="12" />}/>
         </div>
         <div className="w-full px-s">
-          <Button variant="primary" size="M" onClick={() => console.log('Hey')} as="button">
+          <Button variant="primary" size="M" onClick={() => {}} as="button">
             <div className="flex items-center justify-center gap-x-xs">
               Follow
               <MumbleIcon size="16px" />
@@ -42,10 +40,10 @@ const Template: Story<{}> = () => (
 
         <div className="flex flex-col items-center justify-center mb-s mt-s">
           <Label variant="L">Peter</Label>
-          <MumbleDetails variant="username" value="Peter" />
+          <IconLabel variant="violet" value="Peter" icon={<ProfileIcon size="12" />}/>
         </div>
         <div className="w-full px-s">
-          <Button variant="primary" size="M" onClick={() => console.log('Hey')} as="button">
+          <Button variant="primary" size="M" onClick={() => {}} as="button">
             <div className="flex items-center justify-center gap-x-xs">
               Follow
               <MumbleIcon size="16px" />
@@ -62,10 +60,10 @@ const Template: Story<{}> = () => (
 
         <div className="flex flex-col items-center justify-center mb-s mt-s">
           <Label variant="L">Moreno</Label>
-          <MumbleDetails variant="username" value="Moreno" />
+          <IconLabel variant="violet" value="Moreno" icon={<ProfileIcon size="12" />}/>
         </div>
         <div className="w-full px-s">
-          <Button variant="primary" size="M" onClick={() => console.log('Hey')} as="button">
+          <Button variant="primary" size="M" onClick={() => {}} as="button">
             <div className="flex items-center justify-center gap-x-xs">
               Follow
               <MumbleIcon size="16px" />

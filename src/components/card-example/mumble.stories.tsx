@@ -1,19 +1,18 @@
 import { Meta, Story } from '@storybook/react';
 import React, { useEffect, useState } from 'react';
 import { useCopyToClipboard } from 'react-use';
-import { CommentAction, Heading1, Label, LikeAction, Paragraph } from '../index';
-import { MumbleDetails } from '../mumble-details/mumble-details';
+import { ClockIcon, CommentAction, IconLabel, Label, LikeAction, Paragraph, ProfileIcon } from '../index';
 import { ProfilePicture } from '../profile-picture/profile-picture';
 import { ShareButton } from '../share-button/share-button';
 
 export default {
   title: 'Card Example/Mumble',
-  component: Heading1,
 } as Meta<{}>;
 
 const Template: Story<{}> = () => {
   const [likes, setLikes] = useState(0);
   const [comments, setComments] = useState(0);
+  const [hasMyLike, setHasMyLike] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
   const [, copyToClipboard] = useCopyToClipboard();
   const link = 'https://smartive.ch/';
@@ -23,7 +22,7 @@ const Template: Story<{}> = () => {
   }, [isCopied]);
 
   return (
-    <div className=" bg-slate-100 w-screen h-screen p-xl">
+    <div className=" bg-slate-100 w-full h-full p-xl">
       <div className=" bg-white w-[615px] h-[650px] p-xl rounded-2xl">
         <div className="flex mb-s">
           <ProfilePicture
@@ -34,8 +33,8 @@ const Template: Story<{}> = () => {
           <div className="ml-xs">
             <Label variant="M">Marco Baumgartner</Label>
             <div className="flex gap-x-s">
-              <MumbleDetails variant="username" value="BaumG" />
-              <MumbleDetails variant="timestamp" value="Today" />
+              <IconLabel variant='violet' value="BaumG" icon={<ProfileIcon size="12" />} />
+              <IconLabel variant="gray" value="Today" icon={<ClockIcon size="12" />}/>
             </div>
           </div>
         </div>
@@ -52,7 +51,19 @@ const Template: Story<{}> = () => {
         </div>
         <div className="flex justify-start gap-x-l mt-s">
           <CommentAction onClick={() => setComments(comments + 1)} count={comments} />
-          <LikeAction onClick={() => setLikes(likes + 1)} count={likes} />
+          <LikeAction
+            hasMyLike={hasMyLike}
+            count={likes}
+            onClick={() => {
+              if (hasMyLike) {
+                setHasMyLike(false);
+                setLikes(likes - 1);
+                return;
+              }
+              setLikes(likes + 1);
+              setHasMyLike(true);
+            }}
+          />
           <ShareButton
             onClick={() => {
               setIsCopied(!isCopied);

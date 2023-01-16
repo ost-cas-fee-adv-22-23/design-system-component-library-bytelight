@@ -2,11 +2,11 @@ import React, { FC, ReactNode } from 'react';
 import { joinClassNames } from '../../helpers';
 
 export type ButtonProps = {
-  onClick: () => void;
+  onClick?: () => void;
   children: ReactNode;
   variant?: 'primary' | 'secondary' | 'tertiary';
   size?: 'M' | 'L';
-  as: 'button' | '';
+  as: 'button' | 'a';
   href?: string;
 };
 
@@ -39,7 +39,7 @@ export const Button: FC<ButtonProps> = ({ onClick, children, variant = 'primary'
     ) : (
       <a
         className={joinClassNames([
-          'w-full rounded-lg font-semibold transition-colors hover:outline active:outline active:outline-s hover:outline-xs text-white',
+          'flex w-full justify-center rounded-lg font-semibold transition-colors hover:outline active:outline active:outline-s hover:outline-xs text-white cursor-pointer',
           size === 'M' ? 'p-3' : 'px-6 py-4',
           getVariantStyles(variant, size),
         ])}

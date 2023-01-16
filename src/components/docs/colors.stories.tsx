@@ -1,10 +1,16 @@
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
-import { Colors, Colors as defaultColors } from './colors';
+import { Colors } from './colors';
 
 export default {
   title: 'Colors',
-  component: defaultColors,
+  parameters: {
+    previewTabs: {
+      'storybook/docs/panel': {
+        hidden: true,
+      },
+    },
+  },
 } as Meta;
 
 const Template: Story = () => (

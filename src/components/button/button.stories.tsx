@@ -44,4 +44,5 @@ Button.args = {
   size: 'M',
   children: 'Button Label',
   href: '#',
+  as: 'button'
 };

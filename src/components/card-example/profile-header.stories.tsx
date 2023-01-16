@@ -1,17 +1,16 @@
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
-import { Heading1, Label, Paragraph } from '../index';
-import { MumbleDetails } from '../mumble-details/mumble-details';
+
+import { CalendarIcon, IconLabel, Label, LocationIcon, Paragraph, ProfileIcon } from '../index';
 import { ProfilePicture } from '../profile-picture/profile-picture';
 
 export default {
   title: 'Card Example/ProfileHeader',
-  component: Heading1,
 } as Meta<{}>;
 
 const Template: Story<{}> = () => {
   return (
-    <div className="flex bg-slate-100 w-screen h-screen p-xl">
+    <div className="flex bg-slate-100 w-full h-full p-xl">
       <div className="w-[615px] h-[650px] rounded-2xl">
         <div className="flex relative mt-s">
           <img src="https://wallpaperaccess.com/full/2222765.jpg" className="rounded-xl w-full h-full" />
@@ -26,9 +25,10 @@ const Template: Story<{}> = () => {
         <div className="mt-m">
           <Label variant="XL">Luffy</Label>
           <div className="flex gap-x-s mb-s">
-            <MumbleDetails variant="username" value="Luffy" />
-            <MumbleDetails variant="location" value="Foosha Village" />
-            <MumbleDetails variant="joined" value="Mitglied seit 18 Jahren" />
+            <IconLabel variant="violet" value="Luffy" icon={<ProfileIcon size="12" />}/>
+            <IconLabel variant="gray" value="Foosha Village" icon={<LocationIcon size="12" />}
+/>
+            <IconLabel variant="gray" value="Mitglied seit 18 Jahren"  icon={<CalendarIcon size="12" />}/>
           </div>
         </div>
         <Paragraph fontSize="M">

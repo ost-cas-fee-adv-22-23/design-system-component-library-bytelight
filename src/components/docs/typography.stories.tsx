@@ -1,9 +1,8 @@
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
-import { Heading1, Heading2, Heading3, Heading4, Label, Paragraph } from '../index';
+import { Heading1, Heading2, Heading3, Heading4, IconLabel, Label, LinkLabel, LocationIcon, Paragraph, ProfileIcon } from '../index';
 export default {
   title: 'Typography',
-  component: Heading1,
 } as Meta<{}>;
 
 const Template: Story<{}> = () => (
@@ -14,10 +13,10 @@ const Template: Story<{}> = () => (
       </div>
       <Paragraph fontSize="L">Google Font “Poppins”, Medium, Semibold & Bold</Paragraph>
     </div>
-    <Heading1>Überschrift H1</Heading1>
-    <Heading2>Überschrift H2</Heading2>
-    <Heading3>Überschrift H3</Heading3>
-    <Heading4>Überschrift H4</Heading4>
+    <Heading1>Heading 1</Heading1>
+    <Heading2>Heading 2</Heading2>
+    <Heading3>Heading 3</Heading3>
+    <Heading4>Heading 4</Heading4>
     <div className="flex flex-col gap-y-xs mt-m">
       <Paragraph fontSize="L">
         Paragraph L – Quia aut et aut. Sunt et eligendi similique enim qui quo minus. Aut aut error velit voluptatum optio
@@ -37,6 +36,13 @@ const Template: Story<{}> = () => (
       <Label variant="M">Label M</Label>
       <Label variant="Placeholder">Placeholder</Label>
       <Label variant="S">Label S</Label>
+    </div>
+    <div className="flex flex-col gap-y-xs mt-m">
+      <IconLabel variant='violet' value='Icon Label' icon={<ProfileIcon size="12" />} href={'#'}/>
+      <IconLabel variant='gray' value='Icon Label' icon={<LocationIcon size="12" />} href={'#'}/>
+    </div>
+    <div className="mt-m">
+      <LinkLabel href='#'>Link Label</LinkLabel>
     </div>
   </>
 );
