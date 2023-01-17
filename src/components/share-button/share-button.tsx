@@ -3,15 +3,20 @@ import { useCopyToClipboard } from 'react-use';
 import { ShareIcon } from '../icons/share';
 
 type Props = {
-  icon: ReactNode;
+  icon?: ReactNode;
   label: string;
   labelTransition: string;
+  link: string;
 };
 
-export const ShareButton: FC<Props> = ({ label = 'Copy Link', labelTransition = 'Link copied' }) => {
+export const ShareButton: FC<Props> = ({
+  label = 'Copy Link',
+  labelTransition = 'Link copied',
+  link,
+  icon = <ShareIcon size="16px" />,
+}) => {
   const [isCopied, setIsCopied] = useState(false);
   const [, copyToClipboard] = useCopyToClipboard();
-  const link = 'https://smartive.ch/';
 
   useEffect(() => {
     setTimeout(() => setIsCopied(false), 2000);
@@ -26,7 +31,7 @@ export const ShareButton: FC<Props> = ({ label = 'Copy Link', labelTransition = 
       className="flex items-center text-slate-600 hover:bg-slate-100 hover:rounded-2xl"
     >
       <div className="flex items-center gap-x-xs p-xs hover:text-slate-700 focus:rounded-2xl focus:bg-slate-100">
-        <ShareIcon size="16px" />
+        {icon}
         <span>{!isCopied ? label : labelTransition}</span>
       </div>
     </button>
