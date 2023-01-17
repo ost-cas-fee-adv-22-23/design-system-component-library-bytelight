@@ -49,5 +49,5 @@ export const CommentAction = Template.bind({});
 
 CommentAction.args = {
   count: 0,
-  label: 'labellll',
+  label: 'Comments',
 };

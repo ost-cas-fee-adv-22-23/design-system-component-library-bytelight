@@ -34,6 +34,6 @@ const Template: ComponentStory<typeof ShareButtonComponent> = (args) => {
 export const ShareButton = Template.bind({});
 
 ShareButton.args = {
-  label: 'Copy Me pls',
+  label: 'Copy me!',
   labelTransition: 'Thanks!',
 };
