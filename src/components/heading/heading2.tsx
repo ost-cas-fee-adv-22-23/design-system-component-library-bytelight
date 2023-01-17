@@ -1,4 +1,4 @@
 import React, { FC } from 'react';
-import { HeadingProps } from './heading1';
+import { Props } from './heading1';
 
-export const Heading2: FC<HeadingProps> = ({ children }) => <h2 className={'text-slate-600 text-4xl '}>{children}</h2>;
+export const Heading2: FC<Props> = ({ children }) => <h2 className={'text-slate-600 text-4xl '}>{children}</h2>;

@@ -1,11 +1,11 @@
 import React, { FC, ReactNode } from 'react';
 import { joinClassNames } from '../../helpers';
 
-type ParagraphProps = {
+type Props = {
   children?: ReactNode;
   fontSize: 'L' | 'M';
 };
 
-export const Paragraph: FC<ParagraphProps> = ({ children, fontSize = 'L' }) => (
+export const Paragraph: FC<Props> = ({ children, fontSize = 'L' }) => (
   <p className={joinClassNames(['text-slate-600', fontSize === 'L' ? 'text-2xl' : 'text-xl'])}>{children}</p>
 );

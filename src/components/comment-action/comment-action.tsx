@@ -11,7 +11,7 @@ type Props = {
 export const CommentAction: FC<Props> = ({ onClick, label, icon, className }) => {
   return (
     <button onClick={onClick} className={className}>
-      <div className="flex items-center gap-x-xs p-xs hover:text-violet-600">
+      <div className="flex items-center gap-x-xs p-xs text-slate-600 hover:text-violet-600">
         {icon}
         <span>{label}</span>
       </div>
