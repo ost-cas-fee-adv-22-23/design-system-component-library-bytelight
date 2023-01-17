@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import React from 'react';
-import { TextInput as InputComponent } from './text-input';
+import { Input as InputComponent } from './input';
 
 export default {
   title: 'Components/Input',
@@ -25,9 +25,9 @@ const Template: ComponentStory<typeof InputComponent> = ({ placeholder, label, l
     <InputComponent placeholder={placeholder} label={label} labelVariant={labelVariant} onInput={onInput} />
   </>
 );
-export const TextInput = Template.bind({});
+export const Input = Template.bind({});
 
-TextInput.args = {
+Input.args = {
   label: 'Default Label',
   placeholder: 'Placeholder',
   labelVariant: 'M',
