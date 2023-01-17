@@ -11,23 +11,27 @@ export default {
       control: { type: 'text' },
     },
   },
-
-
 } as ComponentMeta<typeof MumbleModal>;
 
-const Template: ComponentStory<typeof MumbleModal> = ({ onClose, children, title}) => {
-
-  const [isOpen, setIsOpen] = useState(false)
+const Template: ComponentStory<typeof MumbleModal> = ({ onClose, children, title }) => {
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-  <>  
-  {isOpen? <MumbleModal onClose={() => setIsOpen(!isOpen)} title={title}>{children}</MumbleModal> : <Button as='button' onClick={() => setIsOpen(!isOpen)}>Open Modal</Button> }
-  </>
-
-)
+    <>
+      {isOpen ? (
+        <MumbleModal onClose={() => setIsOpen(!isOpen)} title={title}>
+          {children}
+        </MumbleModal>
+      ) : (
+        <Button as="button" onClick={() => setIsOpen(!isOpen)}>
+          Open Modal
+        </Button>
+      )}
+    </>
+  );
 };
 export const Modal = Template.bind({});
 
 Modal.args = {
-  title: 'Einstellungen'
+  title: 'Einstellungen',
 };

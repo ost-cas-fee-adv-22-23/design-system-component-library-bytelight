@@ -3,7 +3,7 @@ import React from 'react';
 import { CalendarIcon, IconLabel, Label, LocationIcon, Paragraph, ProfileIcon, ProfilePicture } from '../index';
 
 export default {
-  title: 'Card Example/ProfileHeader',
+  title: 'Card Examples/ProfileHeader',
 } as Meta<{}>;
 
 const Template: Story<{}> = () => {
@@ -23,10 +23,9 @@ const Template: Story<{}> = () => {
         <div className="mt-m">
           <Label variant="XL">Luffy</Label>
           <div className="flex gap-x-s mb-s">
-            <IconLabel variant="violet" value="Luffy" icon={<ProfileIcon size="12" />}/>
-            <IconLabel variant="gray" value="Foosha Village" icon={<LocationIcon size="12" />}
-/>
-            <IconLabel variant="gray" value="Mitglied seit 18 Jahren"  icon={<CalendarIcon size="12" />}/>
+            <IconLabel variant="violet" value="Luffy" icon={<ProfileIcon size="12" />} />
+            <IconLabel variant="gray" value="Foosha Village" icon={<LocationIcon size="12" />} />
+            <IconLabel variant="gray" value="Mitglied seit 18 Jahren" icon={<CalendarIcon size="12" />} />
           </div>
         </div>
         <Paragraph fontSize="M">

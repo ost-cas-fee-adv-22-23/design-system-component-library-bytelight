@@ -1,5 +1,5 @@
 import React, { FC, ReactNode, useState } from 'react';
-import { MumbleIcon } from '../index';
+import { EyeIcon, MumbleIcon } from '../index';
 import { Label } from '../label/label';
 
 type Props = {
@@ -16,7 +16,7 @@ export const InputWithIcon: FC<Props> = ({
   label,
   labelVariant = 'L',
   onInput,
-  icon = <MumbleIcon />,
+  icon = <MumbleIcon size="16" />,
   isPasswordInput = false,
 }) => {
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
@@ -33,7 +33,7 @@ export const InputWithIcon: FC<Props> = ({
               placeholder={placeholder}
               onInput={(e) => onInput((e.target as HTMLInputElement).value)}
             />
-            <div className="absolute p-4 text-slate-600 h-12">{icon}</div>
+            <div className="absolute p-4 text-slate-600">{icon}</div>
           </>
         ) : (
           <>
@@ -44,10 +44,10 @@ export const InputWithIcon: FC<Props> = ({
               onInput={(e) => onInput((e.target as HTMLInputElement).value)}
             />
             <button
-              className="absolute p-4 text-slate-600 cursor-pointer h-12"
+              className="absolute p-4 text-slate-600 cursor-pointer"
               onClick={() => setIsPasswordVisible(!isPasswordVisible)}
             >
-              {icon}
+              <EyeIcon size="16" />
             </button>
           </>
         )}

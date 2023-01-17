@@ -1,9 +1,22 @@
 import { Meta, Story } from '@storybook/react';
 import React, { useState } from 'react';
-import { Button, CancelIcon, CheckmarkIcon, Heading4, IconLabel, Label, Modal, ProfileIcon, ProfilePicture, SendIcon, Textarea, UploadIcon } from '../index';
+import {
+  Button,
+  CancelIcon,
+  CheckmarkIcon,
+  Heading4,
+  IconLabel,
+  Label,
+  Modal,
+  ProfileIcon,
+  ProfilePicture,
+  SendIcon,
+  Textarea,
+  UploadIcon,
+} from '../index';
 
 export default {
-  title: 'Card Example/WriteMumble',
+  title: 'Card Examples/WriteMumble',
 } as Meta<{}>;
 
 const Template: Story<{}> = () => {
@@ -21,8 +34,7 @@ const Template: Story<{}> = () => {
             <Heading4>Hey, was läuft da?</Heading4>
           </div>
         </div>
-
-        <div className="mt-s">
+        <div className="h-40 mt-s">
           <Textarea placeholder="Deine Meinung zählt!" onTextareaChange={() => {}} />
         </div>
         <div className="flex gap-x-s mt-s">
@@ -49,10 +61,10 @@ const Template: Story<{}> = () => {
           />
           <div className="ml-xs">
             <Label variant="M">Marco Baumgartner</Label>
-            <IconLabel variant="violet" value="BaumG" icon={<ProfileIcon size="12" />}/>
+            <IconLabel variant="violet" value="BaumG" icon={<ProfileIcon size="12" />} />
           </div>
         </div>
-        <div className="mt-s">
+        <div className="h-40 mt-s">
           <Textarea placeholder="Deine Meinung zählt!" onTextareaChange={() => {}} />
         </div>
         <div className="flex gap-x-s mt-s">
@@ -72,44 +84,43 @@ const Template: Story<{}> = () => {
       </div>
       {showModal && (
         <div className="fixed inline-flex w-full h-full items-center justify-center">
-         <Modal onClose={() => setShowModal(false)} title='Bild hochladen'>
-         <form className=" bg-slate-200 border-2 border-dashed border-slate-300 mx-l text-slate-500 rounded-lg mb-s py-xl">
-          <input className="hidden" type="file" multiple={true} />
-          <label htmlFor="input-file-upload">
-            <div className="flex flex-col items-center justify-center">
-              <UploadIcon size="16" />
-              <span>Datei hierhin ziehen ...</span>
-              <span>JPEG oder PNG, maximal 50MB</span>
+          <Modal onClose={() => setShowModal(false)} title="Bild hochladen">
+            <form className=" bg-slate-200 border-2 border-dashed border-slate-300 mx-l text-slate-500 rounded-lg mb-s py-xl">
+              <input className="hidden" type="file" multiple={true} />
+              <label htmlFor="input-file-upload">
+                <div className="flex flex-col items-center justify-center">
+                  <UploadIcon size="16" />
+                  <span>Datei hierhin ziehen ...</span>
+                  <span>JPEG oder PNG, maximal 50MB</span>
+                </div>
+              </label>
+            </form>
+            <div className="flex mb-xl px-l ">
+              <Button as="button" variant="secondary" onClick={() => {}}>
+                <div className="flex items-center justify-center gap-x-xs">
+                  ... oder Datei auswählen
+                  <UploadIcon size="16" />
+                </div>
+              </Button>
             </div>
-          </label>
-        </form>
-        <div className="flex mb-xl px-l ">
-          <Button as="button" variant="secondary" onClick={() => {}}>
-            <div className="flex items-center justify-center gap-x-xs">
-              ... oder Datei auswählen
-              <UploadIcon size="16" />
+            <div className="flex px-l gap-x-s pb-l">
+              <Button as="button" variant="secondary" onClick={() => {}}>
+                <div className="flex items-center justify-center gap-x-xs">
+                  Abbrechen
+                  <CancelIcon size="16" />
+                </div>
+              </Button>
+              <Button as="button" onClick={() => {}}>
+                <div className="flex items-center justify-center gap-x-xs">
+                  Speichern
+                  <CheckmarkIcon size="16" />
+                </div>
+              </Button>
             </div>
-          </Button>
-        </div>
-        <div className="flex px-l gap-x-s pb-l">
-          <Button as="button" variant="secondary" onClick={() => {}}>
-            <div className="flex items-center justify-center gap-x-xs">
-              Abbrechen
-              <CancelIcon size="16" />
-            </div>
-          </Button>
-          <Button as="button" onClick={() => {}}>
-            <div className="flex items-center justify-center gap-x-xs">
-              Speichern
-              <CheckmarkIcon size="16" />
-            </div>
-          </Button>
-        </div>
-         </Modal>
+          </Modal>
         </div>
       )}
     </div>
   );
 };
-
 export const WriteMumble = Template.bind({});

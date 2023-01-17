@@ -1,17 +1,15 @@
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
-import { Button, CancelIcon, CheckmarkIcon, Heading1, Modal, UploadIcon } from '../index';
+import { Button, CancelIcon, CheckmarkIcon, Modal, UploadIcon } from '../index';
 
 export default {
-  title: 'Card Example/UploadModal',
-  component: Heading1,
+  title: 'Card Examples/UploadModal',
 } as Meta<{}>;
 
 const Template: Story<{}> = () => {
-
   return (
-  <>
-     <Modal onClose={() =>{}} title='Bild hochladen'>
+    <>
+      <Modal onClose={() => {}} title="Bild hochladen">
         <form className=" bg-slate-200 border-2 border-dashed border-slate-300 mx-l text-slate-500 rounded-lg mb-s py-xl">
           <input className="hidden" type="file" multiple={true} />
           <label htmlFor="input-file-upload">
@@ -45,9 +43,7 @@ const Template: Story<{}> = () => {
           </Button>
         </div>
       </Modal>
-  </>
-)
-}
+    </>
+  );
+};
 export const UploadModal = Template.bind({});
-
-
