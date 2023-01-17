@@ -6,11 +6,11 @@ import {
   CheckmarkIcon,
   EyeIcon,
   Heading1,
-  Input,
   InputWithIcon,
   Label,
   Modal,
   Textarea,
+  TextInput,
 } from '../index';
 
 export default {
@@ -24,9 +24,9 @@ const Template: Story<{}> = () => {
       <Modal onClose={() => {}} title="Einstellungen">
         <div className="flex flex-col px-l gap-y-xxs">
           <Label variant="XL"> Persönliche Einstellungen</Label>
-          <Input placeholder="" label="Name Vorname" labelVariant="M" onInput={() => {}} />
-          <Input placeholder="" label="E-Mail-Adresse" labelVariant="M" onInput={() => {}} />
-          <Input placeholder="" label="Ortschaft" labelVariant="M" onInput={() => {}} />
+          <TextInput placeholder="" label="Name Vorname" labelVariant="M" onInput={() => {}} />
+          <TextInput placeholder="" label="E-Mail-Adresse" labelVariant="M" onInput={() => {}} />
+          <TextInput placeholder="" label="Ortschaft" labelVariant="M" onInput={() => {}} />
           <Label variant="M">Biografie</Label>
           <Textarea placeholder="" onTextareaChange={() => {}} />
         </div>

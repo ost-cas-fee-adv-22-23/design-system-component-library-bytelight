@@ -16,4 +16,4 @@ export * from './profile-picture';
 export * from './share-button';
 export * from './switch';
 export * from './textarea';
-export * from './input';
+export * from './text-input';

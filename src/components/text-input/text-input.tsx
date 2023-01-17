@@ -8,7 +8,7 @@ type Props = {
   onInput: (input: string) => void;
 };
 
-export const Input: FC<Props> = ({ placeholder, label, labelVariant = 'L', onInput }) => (
+export const TextInput: FC<Props> = ({ placeholder, label, labelVariant = 'L', onInput }) => (
   <>
     <Label variant={labelVariant}>{label}</Label>
     <div className=" flex items-center justify-end border border-slate-200 rounded-lg hover:border-violet-600">
