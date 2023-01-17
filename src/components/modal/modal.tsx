@@ -1,13 +1,13 @@
 import React, { FC, ReactNode, useEffect } from 'react';
 import { CancelIcon } from '../index';
 
-type ModalProps = {
+type Props = {
   onClose: () => void;
   children: ReactNode
   title:string
 };
 
-export const Modal: FC<ModalProps> = ({onClose, children, title}) => {
+export const Modal: FC<Props> = ({onClose, children, title}) => {
   useEffect(() => {
     document.body.classList.add('overflow-hidden');
     return () => document.body.classList.remove('overflow-hidden');

@@ -1,7 +1,6 @@
 import React, { FC, ReactNode } from 'react';
-import { ShareIcon } from '../icons/share';
 
-type ShareButtonProps = {
+type Props = {
   onClick: () => void;
   icon: ReactNode;
   isActive: boolean;
@@ -9,7 +8,7 @@ type ShareButtonProps = {
   labelTransition: string;
 };
 
-export const ShareButton: FC<ShareButtonProps> = ({
+export const ShareButton: FC<Props> = ({
   onClick,
   isActive = false,
   label = 'Copy Link',

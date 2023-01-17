@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { joinClassNames } from '../../helpers/index';
 
-type ProfilePictureProps = {
+type Props = {
   src: string;
   alt: string;
   size: 'S' | 'M' | 'L' | 'XL';
@@ -9,7 +9,7 @@ type ProfilePictureProps = {
 
 const borderStyle = 'border-4 border-slate-100';
 
-export const ProfilePicture: FC<ProfilePictureProps> = ({ src, alt, size = 'M' }) => (
+export const ProfilePicture: FC<Props> = ({ src, alt, size = 'M' }) => (
   <div
     className={joinClassNames([
       'flex items-center justify-center rounded-full bg-violet-200',

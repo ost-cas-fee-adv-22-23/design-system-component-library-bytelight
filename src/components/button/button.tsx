@@ -1,7 +1,7 @@
 import React, { FC, ReactNode } from 'react';
 import { joinClassNames } from '../../helpers';
 
-export type ButtonProps = {
+export type Props = {
   onClick?: () => void;
   children: ReactNode;
   variant?: 'primary' | 'secondary' | 'tertiary';
@@ -10,7 +10,7 @@ export type ButtonProps = {
   href?: string;
 };
 
-export const getVariantStyles = (variant: ButtonProps['variant'], size: ButtonProps['size']) => {
+export const getVariantStyles = (variant: Props['variant'], size: Props['size']) => {
   switch (variant) {
     case 'primary':
       return 'text-white hover:bg-violet-700 hover:outline-violet-100 disabled:bg-gray-300 bg-violet-600 active:outline-violet-200';
@@ -23,7 +23,7 @@ export const getVariantStyles = (variant: ButtonProps['variant'], size: ButtonPr
   }
 };
 
-export const Button: FC<ButtonProps> = ({ onClick, children, variant = 'primary', size = 'M', as, href }) => (
+export const Button: FC<Props> = ({ onClick, children, variant = 'primary', size = 'M', as, href }) => (
   <>
     {as === 'button' ? (
       <button

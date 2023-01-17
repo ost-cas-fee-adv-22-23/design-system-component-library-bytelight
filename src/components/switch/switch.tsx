@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
 
-type SwitchProps = {
+type Props = {
   onClick: () => void;
   isActive: boolean;
 };
 
-export const Switch: FC<SwitchProps> = ({ onClick, isActive = true }) => (
+export const Switch: FC<Props> = ({ onClick, isActive = true }) => (
   <div className="inline-flex bg-slate-200 rounded-lg text-xl p-xxs">
     <button onClick={onClick} className="flex">
       <span

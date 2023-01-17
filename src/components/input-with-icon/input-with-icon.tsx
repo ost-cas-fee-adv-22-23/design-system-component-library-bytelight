@@ -2,7 +2,7 @@ import React, { FC, ReactNode, useState } from 'react';
 import { MumbleIcon } from '../index';
 import { Label } from '../label/label';
 
-type InputProps = {
+type Props = {
   placeholder: string;
   label: string;
   labelVariant: 'XL' | 'L' | 'M' | 'S' | 'Placeholder';
@@ -11,7 +11,7 @@ type InputProps = {
   icon: ReactNode;
 };
 
-export const InputWithIcon: FC<InputProps> = ({
+export const InputWithIcon: FC<Props> = ({
   placeholder,
   label,
   labelVariant = 'L',

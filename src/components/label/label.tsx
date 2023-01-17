@@ -1,11 +1,11 @@
 import React, { FC, ReactNode } from 'react';
 import { joinClassNames } from '../../helpers';
 
-type LabelProps = {
+type Props = {
   children?: ReactNode;
   variant: 'XL' | 'L' | 'M' | 'Placeholder' | 'S';
 };
-const getVariantStyles = (variant: LabelProps['variant']) => {
+const getVariantStyles = (variant: Props['variant']) => {
   switch (variant) {
     case 'XL':
       return 'text-2xl';
@@ -20,6 +20,6 @@ const getVariantStyles = (variant: LabelProps['variant']) => {
   }
 };
 
-export const Label: FC<LabelProps> = ({ children, variant = 'L' }) => (
+export const Label: FC<Props> = ({ children, variant = 'L' }) => (
   <label className={joinClassNames(['text-slate-600', getVariantStyles(variant)])}>{children}</label>
 );
