@@ -14,22 +14,22 @@ export default {
 
 const Template: Story = () => (
   <>
-  <div className="flex flex-col mb-l p-s max-w-[450px]">
-    <div className='flex flex-col p-s gap-y-s'>
-    <MumbleGradientRow />
-    <MumbleVioletRow />
-    <div className='flex flex-col bg-slate-600 gap-y-s p-s'>
-    <MumbleWhiteRow />
-    <NavbarMumble />
+    <div className="flex flex-col mb-l p-s max-w-[450px]">
+      <div className="flex flex-col p-s gap-y-s">
+        <MumbleGradientRow />
+        <MumbleVioletRow />
+        <div className="flex flex-col bg-slate-600 gap-y-s p-s">
+          <MumbleWhiteRow />
+          <NavbarMumble />
+        </div>
+        <MumbleGradient />
+        <MumbleViolet />
+        <div className="flex flex-col bg-slate-600 gap-y-s p-s">
+          <MumbleWhite />
+        </div>
+      </div>
     </div>
-    <MumbleGradient />
-    <MumbleViolet />
-    <div className='flex flex-col bg-slate-600 gap-y-s p-s'>
-    <MumbleWhite />
-    </div>
-    </div>
-    </div>
-    </>
+  </>
 );
 
 export const Logos = Template.bind({});

@@ -16,7 +16,6 @@ export default {
       options: ['XL', 'L', 'M', 'S', 'Placeholder'],
       control: { type: 'select' },
     },
-    onChange: { action: 'typed' },
   },
 } as ComponentMeta<typeof InputComponent>;
 

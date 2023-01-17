@@ -20,6 +20,9 @@ export default {
       options: [false, true],
       control: { type: 'select' },
     },
+    icon: {
+      control: false,
+    },
   },
 } as ComponentMeta<typeof InputComponentWithIcon>;
 

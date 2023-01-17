@@ -4,13 +4,13 @@ import { ClockIcon, IconLabel, Label, LikeAction, Paragraph, ProfileIcon } from 
 import { ProfilePicture } from '../profile-picture/profile-picture';
 
 export default {
-  title: 'Card Example/Mumble',
+  title: 'Card Examples/Mumble',
 } as Meta<{}>;
 
 const Template: Story<{}> = () => {
   const [likes, setLikes] = useState(0);
   const [hasMyLike, setHasMyLike] = useState(false);
-  
+
   return (
     <div className=" bg-slate-100 w-full h-full p-xl">
       <div className=" bg-white w-[615px] h-[650px] p-xl rounded-2xl">
@@ -23,8 +23,8 @@ const Template: Story<{}> = () => {
           <div className="ml-xs">
             <Label variant="M">Marco Baumgartner</Label>
             <div className="flex gap-x-s">
-              <IconLabel variant='violet' value="BaumG" icon={<ProfileIcon size="12" />} />
-              <IconLabel variant="gray" value="Today" icon={<ClockIcon size="12" />}/>
+              <IconLabel variant="violet" value="BaumG" icon={<ProfileIcon size="12" />} />
+              <IconLabel variant="gray" value="Today" icon={<ClockIcon size="12" />} />
             </div>
           </div>
         </div>
@@ -53,7 +53,6 @@ const Template: Story<{}> = () => {
               setHasMyLike(true);
             }}
           />
-         
         </div>
       </div>
     </div>

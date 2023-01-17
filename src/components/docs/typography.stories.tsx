@@ -1,6 +1,17 @@
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
-import { Heading1, Heading2, Heading3, Heading4, IconLabel, Label, LinkLabel, LocationIcon, Paragraph, ProfileIcon } from '../index';
+import {
+  Heading1,
+  Heading2,
+  Heading3,
+  Heading4,
+  IconLabel,
+  Label,
+  LinkLabel,
+  LocationIcon,
+  Paragraph,
+  ProfileIcon,
+} from '../index';
 export default {
   title: 'Typography',
 } as Meta<{}>;
@@ -8,8 +19,8 @@ export default {
 const Template: Story<{}> = () => (
   <>
     <div className="mb-m">
-      <div className='mb-m'>
-      <Heading1>Typografie</Heading1>
+      <div className="mb-m">
+        <Heading1>Typografie</Heading1>
       </div>
       <Paragraph fontSize="L">Google Font “Poppins”, Medium, Semibold & Bold</Paragraph>
     </div>
@@ -22,8 +33,8 @@ const Template: Story<{}> = () => (
         Paragraph L – Quia aut et aut. Sunt et eligendi similique enim qui quo minus. Aut aut error velit voluptatum optio
         sed quis cumque error magni.
       </Paragraph>
-      </div>
-      <div className='mt-m'>
+    </div>
+    <div className="mt-m">
       <Paragraph fontSize="M">
         Paragraph M – Quia aut et aut. Sunt et eligendi similique enim qui quo minus. Aut aut error velit voluptatum optio
         sed quis cumque error magni. Deserunt pariatur molestiae incidunt. Omnis deserunt ratione et recusandae quos
@@ -38,11 +49,11 @@ const Template: Story<{}> = () => (
       <Label variant="S">Label S</Label>
     </div>
     <div className="flex flex-col gap-y-xs mt-m">
-      <IconLabel variant='violet' value='Icon Label' icon={<ProfileIcon size="12" />}/>
-      <IconLabel variant='gray' value='Icon Label' icon={<LocationIcon size="12" />}/>
+      <IconLabel variant="violet" value="Icon Label" icon={<ProfileIcon size="12" />} />
+      <IconLabel variant="gray" value="Icon Label" icon={<LocationIcon size="12" />} />
     </div>
     <div className="mt-m">
-      <LinkLabel href='#'>Link Label</LinkLabel>
+      <LinkLabel href="#">Link Label</LinkLabel>
     </div>
   </>
 );

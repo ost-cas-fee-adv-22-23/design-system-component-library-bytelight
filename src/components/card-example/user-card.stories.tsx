@@ -4,7 +4,7 @@ import { MumbleIcon } from '../icons/mumble';
 import { Button, IconLabel, Label, ProfileIcon, ProfilePicture } from '../index';
 
 export default {
-  title: 'Card Example/UserCard',
+  title: 'Card Examples/UserCard',
 } as Meta<{}>;
 
 const Template: Story<{}> = () => (
@@ -16,10 +16,9 @@ const Template: Story<{}> = () => (
           alt="profile-Picture"
           size="L"
         />
-
         <div className="flex flex-col items-center justify-center mb-s mt-s">
           <Label variant="L">Marco</Label>
-          <IconLabel variant="violet" value="BaumG" icon={<ProfileIcon size="12" />}/>
+          <IconLabel variant="violet" value="BaumG" icon={<ProfileIcon size="12" />} />
         </div>
         <div className="w-full px-s">
           <Button variant="primary" size="M" onClick={() => {}} as="button">
@@ -36,10 +35,9 @@ const Template: Story<{}> = () => (
           alt="profile-Picture"
           size="L"
         />
-
         <div className="flex flex-col items-center justify-center mb-s mt-s">
           <Label variant="L">Peter</Label>
-          <IconLabel variant="violet" value="Peter" icon={<ProfileIcon size="12" />}/>
+          <IconLabel variant="violet" value="Peter" icon={<ProfileIcon size="12" />} />
         </div>
         <div className="w-full px-s">
           <Button variant="primary" size="M" onClick={() => {}} as="button">
@@ -56,10 +54,9 @@ const Template: Story<{}> = () => (
           alt="profile-Picture"
           size="L"
         />
-
         <div className="flex flex-col items-center justify-center mb-s mt-s">
           <Label variant="L">Moreno</Label>
-          <IconLabel variant="violet" value="Moreno" icon={<ProfileIcon size="12" />}/>
+          <IconLabel variant="violet" value="Moreno" icon={<ProfileIcon size="12" />} />
         </div>
         <div className="w-full px-s">
           <Button variant="primary" size="M" onClick={() => {}} as="button">

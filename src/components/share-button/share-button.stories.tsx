@@ -1,39 +1,26 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import React, { useEffect, useState } from 'react';
-import { useCopyToClipboard } from 'react-use';
+import React from 'react';
 import { ShareIcon } from '../icons/share';
 import { ShareButton as ShareButtonComponent } from './share-button';
 
 export default {
   title: 'Components/Action',
   component: ShareButtonComponent,
+  argTypes: {
+    label: {
+      control: { type: 'text' },
+    },
+    labelTransition: {
+      control: { type: 'text' },
+    },
+    icon: {
+      control: false,
+    },
+  },
 } as ComponentMeta<typeof ShareButtonComponent>;
 
-const Template: ComponentStory<typeof ShareButtonComponent> = (args) => {
-  const [isCopied, setIsCopied] = useState(false);
-  const [, copyToClipboard] = useCopyToClipboard();
-  const link = 'https://smartive.ch/';
-
-  useEffect(() => {
-    setTimeout(() => setIsCopied(false), 2000);
-  }, [isCopied]);
-
-  return (
-    <ShareButtonComponent
-      {...args}
-      onClick={() => {
-        setIsCopied(true);
-        copyToClipboard(link);
-      }}
-      isActive={isCopied}
-      icon={<ShareIcon size="16px" />}
-    />
-  );
-};
+const Template: ComponentStory<typeof ShareButtonComponent> = ({ icon, label, labelTransition }) => (
+  <ShareButtonComponent icon={<ShareIcon size="16px" />} label="Copy Link" labelTransition="Copied!" />
+);
 
 export const ShareButton = Template.bind({});
-
-ShareButton.args = {
-  label: 'Copy me!',
-  labelTransition: 'Thanks!',
-};

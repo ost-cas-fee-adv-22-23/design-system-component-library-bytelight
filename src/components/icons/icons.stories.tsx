@@ -49,9 +49,9 @@ export default {
       control: { type: 'select' },
     },
   },
-} as unknown as ComponentMeta<typeof Icons['ArrowDownIcon']>;
+} as unknown as ComponentMeta<(typeof Icons)['ArrowDownIcon']>;
 
-const COLORS: Record<typeof colors[number], string> = {
+const COLORS: Record<(typeof colors)[number], string> = {
   black: 'text-black',
   white: 'text-white',
   violet900: 'text-violet-900',
@@ -86,13 +86,13 @@ const COLORS: Record<typeof colors[number], string> = {
   slate50: 'text-slate-50',
 };
 
-const Template: ComponentStory<typeof Icons['ArrowDownIcon']> = (args) => {
+const Template: ComponentStory<(typeof Icons)['ArrowDownIcon']> = (args) => {
   return (
     <div className="flex flex-wrap">
       {Object.values(Icons).map((icon) => (
         <div
           className={`outline outline-1 outline-slate-300 rounded-sm m-2 flex justify-center items-center p-2 ${
-            COLORS[(args as IconProps & { color: typeof colors[number] }).color as typeof colors[number]]
+            COLORS[(args as IconProps & { color: (typeof colors)[number] }).color as (typeof colors)[number]]
           }`}
         >
           {icon({ ...args })}
