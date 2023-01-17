@@ -16,11 +16,19 @@ export default {
     icon: {
       control: false,
     },
+    link: {
+      control: { type: 'text' },
+    },
   },
 } as ComponentMeta<typeof ShareButtonComponent>;
 
-const Template: ComponentStory<typeof ShareButtonComponent> = ({ icon, label, labelTransition }) => (
-  <ShareButtonComponent icon={<ShareIcon size="16px" />} label="Copy Link" labelTransition="Copied!" />
+const Template: ComponentStory<typeof ShareButtonComponent> = ({ icon, label, labelTransition, link }) => (
+  <ShareButtonComponent link={link} label={label} labelTransition={labelTransition} icon={icon} />
 );
 
 export const ShareButton = Template.bind({});
+
+ShareButton.args = {
+  label: 'Copy Link',
+  labelTransition: 'Copied!',
+};
