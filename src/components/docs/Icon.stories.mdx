@@ -1,0 +1,110 @@
+import { Meta, IconGallery, IconItem } from '@storybook/addon-docs';
+import { MumbleIcon } from '../index';
+import { ArrowDownIcon } from '../index';
+import { ArrowLeftIcon } from '../index';
+import { ArrowRightIcon } from '../index';
+import { ArrowUpIcon } from '../index';
+import { CalendarIcon } from '../index';
+import { CancelIcon } from '../index';
+import { CheckmarkIcon } from '../index';
+import { ClockIcon } from '../index';
+import { CommentEmptyIcon } from '../index';
+import { CommentFilledIcon } from '../index';
+import { EditIcon } from '../index';
+import { HeartEmptyIcon } from '../index';
+import { HeartFilledIcon } from '../index';
+import { LocationIcon } from '../index';
+import { LogoutIcon } from '../index';
+import { ProfileIcon } from '../index';
+import { SendIcon } from '../index';
+import { SettingsIcon } from '../index';
+import { ShareIcon } from '../index';
+import { UploadIcon } from '../index';
+
+<Meta title="Icons" />
+
+# IconGallery
+
+<IconGallery>
+  <IconItem name="MumbleIcon">
+    <MumbleIcon />
+  </IconItem>
+  <IconItem name="ArrowDownIcon">
+    <ArrowDownIcon />
+  </IconItem>
+  <IconItem name="ArrowLeftIcon">
+    <ArrowLeftIcon />
+  </IconItem>
+  <IconItem name="ArrowRightIcon">
+    <ArrowRightIcon />
+  </IconItem>
+  <IconItem name="ArrowUpIcon">
+    <ArrowUpIcon />
+  </IconItem>
+  <IconItem name="CalendarIcon">
+    <CalendarIcon />
+  </IconItem>
+  <IconItem name="CancelIcon">
+    <CancelIcon />
+  </IconItem>
+  <IconItem name="CheckmarkIcon">
+    <CheckmarkIcon />
+  </IconItem>
+  <IconItem name="ClockIcon">
+    <ClockIcon />
+  </IconItem>
+  <IconItem name="CommentEmptyIcon">
+    <CommentEmptyIcon />
+  </IconItem>
+  <IconItem name="CommentFilledIcon">
+    <CommentFilledIcon />
+  </IconItem>
+  <IconItem name="EditIcon">
+    <EditIcon />
+  </IconItem>
+  <IconItem name="HeartEmptyIcon">
+    <HeartEmptyIcon />
+  </IconItem>
+  <IconItem name="HeartFilledIcon">
+    <HeartFilledIcon />
+  </IconItem>
+  <IconItem name="LocationIcon">
+    <LocationIcon />
+  </IconItem>
+  <IconItem name="LogoutIcon">
+    <LogoutIcon />
+  </IconItem>
+  <IconItem name="ProfileIcon">
+    <ProfileIcon />
+  </IconItem>
+  <IconItem name="SendIcon">
+    <SendIcon />
+  </IconItem>
+  <IconItem name="SettingsIcon">
+    <SettingsIcon />
+  </IconItem>
+  <IconItem name="ShareIcon">
+    <ShareIcon />
+  </IconItem>
+  <IconItem name="UploadIcon">
+    <UploadIcon />
+  </IconItem>
+</IconGallery>
+
+## Usage
+
+Each icon is a single react component. All you have to do is to import the icon.
+
+```jsx
+import { MumbleIcon } from '@smartive-education/design-system-component-library-bytelight';
+```
+
+### Color and Size
+
+The color of the icon inherits the current text color of the parent element. If required, you can easily assign a new color to the icon via a wrapper. In the following example the color is set on the parent div element of the icon. The size of the icon could be set via the size prop if no size is set, the size will be 100%.
+
+```jsx
+<div className="text-slate-700">
+  <IconMumble size="16" />
+</div>
+```

@@ -8,15 +8,15 @@ type Props = {
 const getVariantStyles = (variant: Props['variant']) => {
   switch (variant) {
     case 'XL':
-      return 'text-2xl';
+      return 'text-xl font-semibold';
     case 'L':
-      return 'text-lg';
+      return 'text-lg font-semibold';
     case 'M':
-      return 'text-sm';
+      return 'text-sm font-semibold';
     case 'Placeholder':
-      return 'text-base text-slate-300';
+      return 'text-sm text-slate-300 font-medium';
     case 'S':
-      return 'text-xs';
+      return 'text-xs font-semibold';
   }
 };
 

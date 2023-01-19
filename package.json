@@ -46,6 +46,7 @@
     "typescript": "^4.9.3"
   },
   "dependencies": {
+    "@storybook/addon-docs": "^6.5.15",
     "react-use": "^17.4.0"
   }
 }

@@ -7,5 +7,12 @@ type Props = {
 };
 
 export const Paragraph: FC<Props> = ({ children, fontSize = 'L' }) => (
-  <p className={joinClassNames(['text-slate-600', fontSize === 'L' ? 'text-2xl' : 'text-xl'])}>{children}</p>
+  <p
+    className={joinClassNames([
+      'text-slate-600 font-medium ',
+      fontSize === 'L' ? 'text-xl leading-normal' : 'text-base leading-snug',
+    ])}
+  >
+    {children}
+  </p>
 );
