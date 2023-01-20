@@ -6,7 +6,7 @@ type Props = {
 };
 
 export const LinkLabel: FC<Props> = ({ href, children }) => (
-  <a className="text-violet-600 text-xs underline underline-offset-2 hover:decoration-slate-200" href={href}>
+  <a className="text-violet-600 text-xs underline underline-offset-2 hover:decoration-slate-200 font-semibold" href={href}>
     {children}
   </a>
 );

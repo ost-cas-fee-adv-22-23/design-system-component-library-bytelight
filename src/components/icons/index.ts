@@ -20,4 +20,5 @@ export * from './mumble';
 export * from './profile';
 export * from './send';
 export * from './settings';
+export * from './share';
 export * from './upload';

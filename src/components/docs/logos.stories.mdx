@@ -1,0 +1,59 @@
+import { Meta } from '@storybook/addon-docs';
+import { MumbleGradient } from '../index';
+import { MumbleGradientRow } from '../index';
+import { MumbleViolet } from '../index';
+import { MumbleVioletRow } from '../index';
+import { MumbleWhite } from '../index';
+import { MumbleWhiteRow } from '../index';
+import { NavbarMumble } from '../index';
+import { Heading2 } from '../index';
+
+<Meta title="Logo" />
+
+# Mumble Logos
+
+All available brand logos can be found below:
+
+<br />
+<div className="flex flex-col">
+  <div className="flex flex-col">
+    <Heading2>MumbleGradientRow</Heading2>
+    <br />
+    <MumbleGradientRow />
+    <br />
+    <Heading2>MumbleVioletRow </Heading2>
+    <br />
+    <MumbleVioletRow />
+    <br />
+    <Heading2>MumbleWhiteRow / NavbarMumble </Heading2>
+    <br />
+    <div className="flex flex-col bg-violet-600 gap-y-s p-s rounded-xl">
+      <MumbleWhiteRow />
+      <br />
+      <NavbarMumble />
+    </div>
+    <br />
+    <Heading2>MumbleGradient </Heading2>
+    <br />
+    <MumbleGradient />
+    <br />
+    <Heading2>MumbleViolet </Heading2>
+    <br />
+    <MumbleViolet />
+    <br />
+    <Heading2>MumbleWhite </Heading2>
+    <br />
+    <div className="flex flex-col bg-violet-600 gap-y-s p-s rounded-xl">
+      <MumbleWhite />
+    </div>
+    <br />
+  </div>
+</div>
+
+## Usage
+
+Each logo is a single react component. All you have to do is to import the icon.
+
+```jsx
+import { MumbleViolet } from '@smartive-education/design-system-component-library-bytelight';
+```
