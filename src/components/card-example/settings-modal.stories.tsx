@@ -16,7 +16,7 @@ const Template: Story<{}> = () => {
           <Input placeholder="" label="E-Mail-Adresse" labelVariant="M" onInput={() => {}} />
           <Input placeholder="" label="Ortschaft" labelVariant="M" onInput={() => {}} />
           <Label variant="M">Biografie</Label>
-          <Textarea placeholder="" onTextareaChange={() => {}} />
+          <Textarea placeholder="" onTextareaChange={() => {}} value="" />
         </div>
         <div className="flex flex-col py-m px-l gap-y-xxs">
           <Label variant="XL">Passwort ändern</Label>
