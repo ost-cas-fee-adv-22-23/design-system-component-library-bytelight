@@ -21,7 +21,7 @@ export default {
 
 const Template: ComponentStory<typeof InputComponent> = ({ placeholder, label, labelVariant, onInput }) => (
   <>
-    <InputComponent placeholder={placeholder} label={label} labelVariant={labelVariant} onInput={onInput} />
+    <InputComponent placeholder={placeholder} label={label} labelVariant={labelVariant} onInput={onInput} value="" />
   </>
 );
 export const Input = Template.bind({});

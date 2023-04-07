@@ -6,9 +6,10 @@ type Props = {
   label: string;
   labelVariant: 'XL' | 'L' | 'M' | 'S';
   onInput: (input: string) => void;
+  value: string;
 };
 
-export const Input: FC<Props> = ({ placeholder, label, labelVariant = 'L', onInput }) => (
+export const Input: FC<Props> = ({ placeholder, label, labelVariant = 'L', onInput, value }) => (
   <>
     <Label variant={labelVariant}>{label}</Label>
     <div className=" flex items-center justify-end border border-slate-200 rounded-lg hover:border-violet-600">
@@ -17,6 +18,7 @@ export const Input: FC<Props> = ({ placeholder, label, labelVariant = 'L', onInp
         type="text"
         placeholder={placeholder}
         onInput={(e) => onInput((e.target as HTMLInputElement).value)}
+        value={value}
       />
     </div>
   </>

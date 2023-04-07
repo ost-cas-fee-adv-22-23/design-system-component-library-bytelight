@@ -12,9 +12,9 @@ const Template: Story<{}> = () => {
       <Modal onClose={() => {}} title="Einstellungen">
         <div className="flex flex-col px-l gap-y-xxs">
           <Label variant="XL"> Persönliche Einstellungen</Label>
-          <Input placeholder="" label="Name Vorname" labelVariant="M" onInput={() => {}} />
-          <Input placeholder="" label="E-Mail-Adresse" labelVariant="M" onInput={() => {}} />
-          <Input placeholder="" label="Ortschaft" labelVariant="M" onInput={() => {}} />
+          <Input placeholder="" label="Name Vorname" labelVariant="M" onInput={() => {}} value="" />
+          <Input placeholder="" label="E-Mail-Adresse" labelVariant="M" onInput={() => {}} value="" />
+          <Input placeholder="" label="Ortschaft" labelVariant="M" onInput={() => {}} value="" />
           <Label variant="M">Biografie</Label>
           <Textarea placeholder="" onTextareaChange={() => {}} value="" />
         </div>
@@ -26,6 +26,7 @@ const Template: Story<{}> = () => {
             labelVariant="M"
             onInput={() => {}}
             icon={<EyeIcon size="16" />}
+            value=""
           />
           <InputWithIcon
             placeholder=""
@@ -33,6 +34,7 @@ const Template: Story<{}> = () => {
             labelVariant="M"
             onInput={() => {}}
             icon={<EyeIcon size="16" />}
+            value=""
           />
         </div>
         <div className="flex px-l gap-x-s pb-l">

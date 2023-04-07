@@ -9,6 +9,7 @@ type Props = {
   isPasswordInput?: boolean;
   onInput: (input: string) => void;
   icon: ReactNode;
+  value: string;
 };
 
 export const InputWithIcon: FC<Props> = ({
@@ -18,6 +19,7 @@ export const InputWithIcon: FC<Props> = ({
   onInput,
   icon = <MumbleIcon size="16" />,
   isPasswordInput = false,
+  value,
 }) => {
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
 
@@ -32,6 +34,7 @@ export const InputWithIcon: FC<Props> = ({
               type="text"
               placeholder={placeholder}
               onInput={(e) => onInput((e.target as HTMLInputElement).value)}
+              value={value}
             />
             <div className="absolute p-4 text-slate-600">{icon}</div>
           </>
@@ -42,6 +45,7 @@ export const InputWithIcon: FC<Props> = ({
               type={isPasswordVisible ? 'text' : 'password'}
               placeholder={placeholder}
               onInput={(e) => onInput((e.target as HTMLInputElement).value)}
+              value={value}
             />
             <button
               className="absolute p-4 text-slate-600 cursor-pointer"
