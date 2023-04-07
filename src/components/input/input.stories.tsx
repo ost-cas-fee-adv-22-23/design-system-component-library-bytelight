@@ -19,9 +19,9 @@ export default {
   },
 } as ComponentMeta<typeof InputComponent>;
 
-const Template: ComponentStory<typeof InputComponent> = ({ placeholder, label, labelVariant, onInput }) => (
+const Template: ComponentStory<typeof InputComponent> = ({ ...args }) => (
   <>
-    <InputComponent placeholder={placeholder} label={label} labelVariant={labelVariant} onInput={onInput} value="" />
+    <InputComponent {...args} />
   </>
 );
 export const Input = Template.bind({});

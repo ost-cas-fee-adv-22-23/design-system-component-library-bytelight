@@ -9,15 +9,15 @@ export default {
     placeholder: {
       control: { type: 'text' },
     },
-    onTextareaChange: { action: 'typed' },
   },
 } as ComponentMeta<typeof TextareaComponent>;
 
-const Template: ComponentStory<typeof TextareaComponent> = ({ placeholder, onTextareaChange }) => (
+const Template: ComponentStory<typeof TextareaComponent> = ({ ...args }) => (
   <>
-    <TextareaComponent placeholder={placeholder} onTextareaChange={onTextareaChange} value="" />
+    <TextareaComponent {...args} />
   </>
 );
+
 export const Textarea = Template.bind({});
 
 Textarea.args = {

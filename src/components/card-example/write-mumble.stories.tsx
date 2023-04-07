@@ -35,7 +35,7 @@ const Template: Story<{}> = () => {
           </div>
         </div>
         <div className="h-40 mt-s">
-          <Textarea placeholder="Deine Meinung zählt!" onTextareaChange={() => {}} value="" />
+          <Textarea placeholder="Deine Meinung zählt!" onChange={() => {}} value="" />
         </div>
         <div className="flex gap-x-s mt-s">
           <Button as="button" variant="secondary" onClick={() => setShowModal(true)}>
@@ -65,7 +65,7 @@ const Template: Story<{}> = () => {
           </div>
         </div>
         <div className="h-40 mt-s">
-          <Textarea placeholder="Deine Meinung zählt!" onTextareaChange={() => {}} value="" />
+          <Textarea placeholder="Deine Meinung zählt!" value="" onChange={() => {}} />
         </div>
         <div className="flex gap-x-s mt-s">
           <Button as="button" variant="secondary" onClick={() => setShowModal(true)}>

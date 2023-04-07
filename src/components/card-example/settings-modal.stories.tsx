@@ -12,11 +12,11 @@ const Template: Story<{}> = () => {
       <Modal onClose={() => {}} title="Einstellungen">
         <div className="flex flex-col px-l gap-y-xxs">
           <Label variant="XL"> Persönliche Einstellungen</Label>
-          <Input placeholder="" label="Name Vorname" labelVariant="M" onInput={() => {}} value="" />
-          <Input placeholder="" label="E-Mail-Adresse" labelVariant="M" onInput={() => {}} value="" />
-          <Input placeholder="" label="Ortschaft" labelVariant="M" onInput={() => {}} value="" />
+          <Input placeholder="" label="Name Vorname" labelVariant="M" onChange={() => {}} value="" />
+          <Input placeholder="" label="E-Mail-Adresse" labelVariant="M" onChange={() => {}} value="" />
+          <Input placeholder="" label="Ortschaft" labelVariant="M" onChange={() => {}} value="" />
           <Label variant="M">Biografie</Label>
-          <Textarea placeholder="" onTextareaChange={() => {}} value="" />
+          <Textarea placeholder="" onChange={() => {}} value="" />
         </div>
         <div className="flex flex-col py-m px-l gap-y-xxs">
           <Label variant="XL">Passwort ändern</Label>
@@ -24,7 +24,7 @@ const Template: Story<{}> = () => {
             placeholder=""
             label="Altes Passwort"
             labelVariant="M"
-            onInput={() => {}}
+            onChange={() => {}}
             icon={<EyeIcon size="16" />}
             value=""
           />
@@ -32,7 +32,7 @@ const Template: Story<{}> = () => {
             placeholder=""
             label="Neues Passwort"
             labelVariant="M"
-            onInput={() => {}}
+            onChange={() => {}}
             icon={<EyeIcon size="16" />}
             value=""
           />
