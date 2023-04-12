@@ -12,7 +12,7 @@ const borderStyle = 'border-4 border-slate-100';
 export const ProfilePicture: FC<Props> = ({ src, alt, size = 'M' }) => (
   <div
     className={joinClassNames([
-      'flex items-center justify-center rounded-full bg-violet-200',
+      'flex items-center justify-center rounded-full bg-violet-200 overflow-hidden',
       size === 'S'
         ? 'w-10 h-10'
         : size === 'M'
@@ -22,6 +22,6 @@ export const ProfilePicture: FC<Props> = ({ src, alt, size = 'M' }) => (
         : `h-40 w-40 ${borderStyle}`,
     ])}
   >
-    <img src={src} alt={alt} sizes={size} className="rounded-full" />
+    <img src={src} alt={alt} sizes={size} className="object-cover h-full w-full" />
   </div>
 );
