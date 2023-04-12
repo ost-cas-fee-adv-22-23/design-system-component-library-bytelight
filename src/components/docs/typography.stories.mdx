@@ -1,0 +1,108 @@
+import {
+  Heading1,
+  Heading2,
+  Heading3,
+  Heading4,
+  IconLabel,
+  Label,
+  LinkLabel,
+  LocationIcon,
+  Paragraph,
+  ProfileIcon,
+} from '../index';
+import { Meta } from '@storybook/addon-docs';
+
+<Meta title="Typography" />
+
+# Typography
+
+| Naming | Size in Pixel |
+| ------ | ------------- |
+| xs     | 14            |
+| sm     | 16            |
+| base   | 18            |
+| lg     | 20            |
+| xl     | 24            |
+| 2xl    | 32            |
+| 3xl    | 40            |
+| 4xl    | 48            |
+
+<>
+  <br />
+  <Heading1>Heading 1</Heading1>
+  <Heading2>Heading 2</Heading2>
+  <Heading3>Heading 3</Heading3>
+  <Heading4>Heading 4</Heading4>
+
+```jsx
+<div>
+  <Heading1> .... </Heading1>
+  <Heading2> .... </Heading2>
+  <Heading3> .... </Heading3>
+  <Heading4> .... </Heading4>
+</div>
+```
+
+<div>
+  <Paragraph fontSize="L">
+    Paragraph L – Quia aut et aut. Sunt et eligendi similique enim qui quo minus. Aut aut error velit voluptatum optio sed
+    quis cumque error magni.
+  </Paragraph>
+</div>
+<br />
+<div>
+  <Paragraph fontSize="M">
+    Paragraph M – Quia aut et aut. Sunt et eligendi similique enim qui quo minus. Aut aut error velit voluptatum optio sed
+    quis cumque error magni. Deserunt pariatur molestiae incidunt. Omnis deserunt ratione et recusandae quos excepturi ut
+    deleniti ut repellat magni.
+  </Paragraph>
+</div>
+
+```jsx
+<div>
+  <Paragraph fontSize="L"> ............ </Paragraph>
+  <Paragraph fontSize="M"> ............ </Paragraph>
+</div>
+```
+
+<div className="flex flex-col gap-y-xs mt-m">
+  <Label variant="XL">Label XL</Label>
+  <Label variant="L">Label L</Label>
+  <Label variant="M">Label M</Label>
+  <Label variant="Placeholder">Placeholder</Label>
+  <Label variant="S">Label S</Label>
+</div>
+
+```jsx
+<div>
+  <Label variant="XL">Label XL</Label>
+  <Label variant="L">Label L</Label>
+  <Label variant="M">Label M</Label>
+  <Label variant="Placeholder">Placeholder</Label>
+  <Label variant="S">Label S</Label>
+</div>
+```
+
+<div className="flex flex-col gap-y-xs">
+  <IconLabel variant="violet" value="Icon Label" icon={<ProfileIcon size="12" />} />
+  <IconLabel variant="gray" value="Icon Label" icon={<LocationIcon size="12" />} />
+</div>
+
+```jsx
+<div>
+  <IconLabel variant="violet" value="Icon Label" icon={<ProfileIcon size="12" />} />
+  <IconLabel variant="gray" value="Icon Label" icon={<LocationIcon size="12" />} />
+</div>
+```
+
+<div>
+  <LinkLabel href="#">Link Label</LinkLabel>
+</div>
+
+```jsx
+<div>
+  <LinkLabel href="#">Link Label</LinkLabel>
+</div>
+```
+
+</>
